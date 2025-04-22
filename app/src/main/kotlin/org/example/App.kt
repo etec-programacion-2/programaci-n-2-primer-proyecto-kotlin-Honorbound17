@@ -3,15 +3,25 @@
  */
 package org.example
 
-fun mainDatos() {
+fun main() {
+    println("Mucho gusto, Kotlin")
+
     val nombre: String = "Ignacio"
     val apellido: = "Esquivel"
+    val fecha: Int = "22/4/25"
+
+    println("Me llamo $nombre $apellido)
+    println("Hoy es: $fecha")
+}
+fun Datos() {
     val edad: Int = "16"
     val altura: Double = "1.75cm"
     val esEstudiante: Boolean = true
+    val fecha: Int = "22/4/25"
 
-    println("Me llamo $nombre $apellido)
     println("Edad: $edad")
     println("Altura: $altura")
     println("Es estudiante: $esEstudiante")
-}
+    println("Hoy es: $fecha")
+    }
+
