@@ -7,21 +7,65 @@ fun main() {
     println("Mucho gusto, Kotlin")
 
     val nombre: String = "Ignacio"
-    val apellido: = "Esquivel"
-    val fecha: Int = "22/4/25"
+    val apellido = "Esquivel"
+    val fecha: String = "22/4/25"
 
-    println("Me llamo $nombre $apellido)
+    println("Me llamo $nombre $apellido")
     println("Hoy es: $fecha")
+
+    Datos()
+    AreaDeTriangulo()
+
+    val edad = 17
+    MayorDeEdad(edad)
+
+    val numero = 7
+    NumeroParEImpar(numero)
+    println("El número entregado, $numero es: ${NumeroParEImpar(numero)}")
+
+    val numEjemplo = -6
+    println("El número $numEjemplo es: ${TipoDeNumero (numEjemplo)}")
 }
+
 fun Datos() {
-    val edad: Int = "16"
-    val altura: Double = "1.75cm"
+    val edad: Int = 16
+    val altura: Double = 1.75
     val esEstudiante: Boolean = true
-    val fecha: Int = "22/4/25"
+    val fecha: String = "22/4/25"
 
     println("Edad: $edad")
     println("Altura: $altura")
     println("Es estudiante: $esEstudiante")
     println("Hoy es: $fecha")
+}
+
+fun AreaDeTriangulo() {
+    val alt: Double = 20.0
+    val base: Double = 15.0
+    val area: Double = base*alt
+    println("El Area del Triangulo es: $area")
+}
+
+fun MayorDeEdad(edad: Int){
+    if (edad >= 18) {
+        println("Es mayor de edad.")
+    } else {
+        println("Es menor de edad.")
     }
+}
+
+fun NumeroParEImpar(numero: Int): String{
+    return when {
+        numero % 2 == 0 -> "Es Par"
+        else -> "Es Impar"
+    }
+}
+
+fun TipoDeNumero(num:Int): String{
+    return when {
+        num > 0 -> "Positivo"
+        num < 0 -> "Negativo"
+        else -> "Cero"
+        }
+}
 
