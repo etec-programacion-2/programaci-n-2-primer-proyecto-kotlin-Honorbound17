@@ -25,6 +25,8 @@ fun main() {
 
     val numEjemplo = -6
     println("El número $numEjemplo es: ${TipoDeNumero (numEjemplo)}")
+
+    NumerosConLoops()
 }
 
 fun Datos() {
@@ -69,3 +71,23 @@ fun TipoDeNumero(num:Int): String{
         }
 }
 
+fun NumerosConLoops() {
+    println("Implementado con for:")
+    for (i in 1..10) {
+        println(i)
+    }
+
+    println("Implementado con while:")
+    var x = 1
+    while (x <= 10) {
+        println(x)
+        x++
+    }
+
+    println("Implementado con do-while:")
+    var y = 1
+    do {
+        println(y)
+        y++
+    } while (y <= 10)
+}
