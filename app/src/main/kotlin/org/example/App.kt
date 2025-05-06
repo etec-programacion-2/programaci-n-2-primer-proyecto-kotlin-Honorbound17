@@ -36,6 +36,12 @@ fun main() {
     println("2 elevado a 3 es: ${Potencia(2, 3)}")
     println("5 elevado a 0 es: ${Potencia(5, 0)}")
 
+    MostrarSaludo()
+    DemoAlcance()
+    VariableGlobal()
+
+    val numeros = listOf(5, 2, 8, 1, 9, 3)
+    BuscarMayorYMenor(numeros)
 }
 
 fun Datos() {
@@ -136,5 +142,49 @@ fun Potencia(base: Int, exponente: Int): Int {
         resultado *= base
     }
     return resultado
+}
+
+fun MostrarSaludo() {
+    val saludo = "Hola desde la función"
+    println(saludo)
+}
+
+fun DemoAlcance() {
+    val mensaje = "Estoy en la función principal"
+
+    if (true) {
+        val mensaje = "Estoy dentro del bloque if"
+        println(mensaje)
+    }
+    println(mensaje)
+}
+
+val nivelGlobal = "Variable Global"
+fun VariableGlobal() {
+    val nivelLocal = "Variable Local"
+    println(nivelGlobal)
+    println(nivelLocal)
+}
+
+fun BuscarMayorYMenor(lista: List<Int>) {
+    if (lista.isEmpty()) {
+        println("Esta lista permanece vacía")
+        return
+    }
+
+    var mayor = lista[0]
+    var menor = lista[0]
+
+    for (digito in lista) {
+        if (digito > mayor) {
+            mayor = digito
+        }
+        if (digito < menor) {
+            menor = digito
+        }
+    }
+
+    println("El dígito mayor es: $mayor")
+    println("El dígito menor es: $menor")
 }
 
