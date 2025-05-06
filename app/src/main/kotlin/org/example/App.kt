@@ -91,3 +91,25 @@ fun NumerosConLoops() {
         y++
     } while (y <= 10)
 }
+
+fun NumerosParesConLoops() {
+    println("Números pares del 2 al 20 - Implementado con for:")
+    for (i in 2..20 step 2) {
+        println(i)
+    }
+
+    println("\nNúmeros pares del 2 al 20 - Implementado con while:")
+    var x = 2
+    while (x <= 20) {
+        println(x)
+        x += 2
+    }
+
+    println("\nNúmeros pares del 2 al 20 - Implementado con do-while:")
+    var y = 2
+    do {
+        println(y)
+        y += 2
+    } while (y <= 20)
+}
+
