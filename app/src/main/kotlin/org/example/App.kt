@@ -27,6 +27,15 @@ fun main() {
     println("El número $numEjemplo es: ${TipoDeNumero (numEjemplo)}")
 
     NumerosConLoops()
+
+    NumerosParesConLoops()
+
+    println("El factorial de 5 es: ${Factorial(5)}")
+    Saludar("Jazmín")
+
+    println("2 elevado a 3 es: ${Potencia(2, 3)}")
+    println("5 elevado a 0 es: ${Potencia(5, 0)}")
+
 }
 
 fun Datos() {
@@ -111,5 +120,21 @@ fun NumerosParesConLoops() {
         println(y)
         y += 2
     } while (y <= 20)
+}
+
+fun Factorial(n: Int): Int {
+    return if (n <= 1) 1 else n * Factorial(n - 1)
+}
+
+fun Saludar(nombre: String, edad: Int = 29) {
+    println("Qué tal $nombre, has de tener $edad años")
+}
+
+fun Potencia(base: Int, exponente: Int): Int {
+    var resultado = 1
+    for (i in 1..exponente) {
+        resultado *= base
+    }
+    return resultado
 }
 
